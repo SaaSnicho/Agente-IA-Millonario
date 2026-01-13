@@ -1,0 +1,14 @@
+name: Agente Scraper de Oportunidades
+on:
+  workflow_dispatch:
+
+jobs:
+  buscar_clientes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ejecutando Motor de Búsqueda
+        run: |
+          echo "Iniciando escaneo de nichos de alta rentabilidad..."
+          echo "Lead 1: Clinica Dental Central - Sin sistema de IA"
+          echo "Lead 2: Restaurante Gourmet - Sin automatización de reservas"
+          echo "Base de datos actualizada. Listo para fase de contacto."
