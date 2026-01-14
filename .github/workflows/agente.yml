@@ -9,10 +9,8 @@ jobs:
       - name: Sincronizando Archivos
         uses: actions/checkout@v3
 
-      - name: Ejecutando Agente 1 (Scraper)
-        run: |
-          echo "Escaneando nichos de mercado..."
-          echo "Base de datos de leads lista."
+      - name: Ejecutando Agente 1 (Scraper Masivo)
+        run: echo "Iniciando escaneo global en múltiples ciudades..."
 
-      - name: Ejecutando Agente 2 (Cerrador)
+      - name: Ejecutando Agente 2 (Cerrador Multi-Nicho)
         run: python propuestas.py
