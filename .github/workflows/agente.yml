@@ -17,3 +17,5 @@ jobs:
       - name: Ejecutando Escaneo Masivo (1.200 Leads)
         run: python propuestas.py
 
+      - name: Ejecutando Sistema de Cobros
+        run: python recaudador.py
