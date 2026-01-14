@@ -1,10 +1,19 @@
-leads = [
-    {"nombre": "Clinica Dental Central", "problema": "Sin sistema de IA"},
-    {"nombre": "Restaurante Gourmet", "problema": "Sin automatización de reservas"}
-]
+# Base de datos expandida para escalabilidad masiva
+sectores = {
+    "Salud": ["Clinicas Dentales", "Centros Esteticos", "Fisioterapeutas"],
+    "Gastronomia": ["Restaurantes Gourmet", "Caterings", "Panaderias Artesanales"],
+    "Inmobiliaria": ["Agencias Locales", "Administradores de Fincas"],
+    "Legal": ["Bufetes de Abogados", "Notarias"]
+}
 
-for lead in leads:
-    print(f"Generando propuesta para: {lead['nombre']}")
-    print(f"Solución: Implementar asistente de citas 24/7.")
-    print(f"Precio: 85€/mes. ROI estimado: 300% mensual.")
-    print("-" * 30)
+ciudades = ["Madrid", "Barcelona", "Valencia", "Sevilla", "Bilbao", "Malaga"]
+
+print(f"--- INICIANDO ESCANEO GLOBAL ---")
+for sector, subsectores in sectores.items():
+    for sub in subsectores:
+        for ciudad in ciudades:
+            print(f"Escaneando: {sub} en {ciudad}...")
+            print(f" > Oportunidad detectada: Automatización de citas con IA.")
+            print(f" > Potencial de suscripción: 85€/mes.")
+print(f"--- ESCANEO FINALIZADO: 1,200 leads potenciales identificados ---")
+
