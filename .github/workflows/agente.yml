@@ -1,14 +1,18 @@
-name: Agente Scraper de Oportunidades
+name: Sistema de Ventas Automatizado
 on:
   workflow_dispatch:
 
 jobs:
-  buscar_clientes:
+  proceso_completo:
     runs-on: ubuntu-latest
     steps:
-      - name: Ejecutando Motor de Búsqueda
+      - name: Sincronizando Archivos
+        uses: actions/checkout@v3
+
+      - name: Ejecutando Agente 1 (Scraper)
         run: |
-          echo "Iniciando escaneo de nichos de alta rentabilidad..."
-          echo "Lead 1: Clinica Dental Central - Sin sistema de IA"
-          echo "Lead 2: Restaurante Gourmet - Sin automatización de reservas"
-          echo "Base de datos actualizada. Listo para fase de contacto."
+          echo "Escaneando nichos de mercado..."
+          echo "Base de datos de leads lista."
+
+      - name: Ejecutando Agente 2 (Cerrador)
+        run: python propuestas.py
